@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+@theme {
+  --color-twtdbp-silver: #c7c8c5;
+  --color-twtdbp-crimson: #ff1627;
+  --color-twtdbp-crimsondark: #f21624;
+  --color-twtdbp-ebony: #131210;
+  --font-display: "Manrope", sans-serif;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("./assets/fonts/Manrope-VariableFont_wght.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+.twtdbp-input {
+  @apply h-12 w-full rounded-lg border border-zinc-300 bg-white px-3.5 text-base text-zinc-950 placeholder:text-zinc-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-twtdbp-crimson;
+
+  &:is(:autofill, :-webkit-autofill) {
+    box-shadow: inset 0 0 0 100px var(--color-white);
+    -webkit-text-fill-color: var(--color-zinc-950);
+  }
+}
