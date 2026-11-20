@@ -1,8 +1,10 @@
 import {useId} from "react";
-import MobileLogo from "../../assets/logos/TWTDBP-Black.svg";
+import MobileLogo from "../../../assets/logos/TWTDBP-Black.svg";
 import {LoginImagePanel} from "./LoginImagePanel";
+import {Link, useNavigate} from "react-router-dom";
 
 export function LoginCard({imageSrc, signUpHref = "/signup"}) {
+  const navigate = useNavigate();
   const id = useId();
   const usernameId = id + "-username";
   const passwordId = id + "-password";
@@ -10,6 +12,7 @@ export function LoginCard({imageSrc, signUpHref = "/signup"}) {
 
   function handleSubmit(event) {
     event.preventDefault();
+    navigate("/dashboard");
   }
 
   return (
@@ -76,12 +79,12 @@ export function LoginCard({imageSrc, signUpHref = "/signup"}) {
 
           <p className="mt-4 text-center text-sm text-zinc-600">
             Do not have an account?{" "}
-            <a
-              href={signUpHref}
+            <Link
+              to={signUpHref}
               className="font-semibold text-twtdbp-ebony underline underline-offset-4 hover:font-bold"
             >
               Sign Up
-            </a>
+            </Link>
           </p>
         </div>
       </div>

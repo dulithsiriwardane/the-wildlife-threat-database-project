@@ -1,4 +1,4 @@
-import {LoginCard} from "../components/auth/LoginCard";
+import {LoginCard} from "../components/auth/login/LoginCard";
 import elephantFamilyRiverImg from "../assets/images/elephant-family-winding-river.png";
 
 export function LoginPage() {

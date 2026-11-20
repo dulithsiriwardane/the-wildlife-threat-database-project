@@ -1,4 +1,4 @@
-import Logo from "../../assets/logos/TWTDBP-White.svg";
+import Logo from "../../../assets/logos/TWTDBP-White.svg";
 
 export function LoginImagePanel({imageSrc}) {
   return (
